@@ -23,7 +23,12 @@ git config user.email "${GITHUB_USERNAME}@users.noreply.github.com"
 
 # Add remote repository
 REMOTE_URL="https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/${GITHUB_USERNAME}/${REPO_NAME}.git"
-git remote add origin "$REMOTE_URL"
+
+if git remote | grep -q origin; then
+  git remote set-url origin "$REMOTE_URL"
+else
+  git remote add origin "$REMOTE_URL"
+fi
 
 echo "✅ Git initialized and remote configured for $REPO_NAME"
 
