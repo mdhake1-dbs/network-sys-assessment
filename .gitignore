@@ -1,1 +1,6 @@
+# Ignore Terraform state and binaries
 github_credentials.env
+.terraform/
+*.tfstate
+*.tfstate.backup
+
