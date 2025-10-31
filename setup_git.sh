@@ -12,7 +12,7 @@ fi
 source github_credentials.env
 
 # Navigate to your project folder
-cd $HOME/networks_ca_1/network-sys-assessment || exit 1
+cd $HOME/network-sys-assessment || exit 1
 
 # Initialize Git
 git init
