@@ -6,18 +6,18 @@ set -e  # exit if any command fails
 
 # Load credentials
 if [ ! -f github_credentials.env ]; then
-  echo "❌ github_credentials.env not found! Create it first."
+  echo "github_credentials.env not found! Create it first."
   exit 1
 fi
 source github_credentials.env
 
-# Navigate to your project folder
+# Navigate to project folder
 cd $HOME/network-sys-assessment || exit 1
 
-# Initialize Git
+# Git Initialization
 git init
 
-# Set Git config (you can customize your name/email)
+# Set Git config
 git config user.name "$GITHUB_USERNAME"
 git config user.email "${GITHUB_USERNAME}@users.noreply.github.com"
 
@@ -30,5 +30,5 @@ else
   git remote add origin "$REMOTE_URL"
 fi
 
-echo "✅ Git initialized and remote configured for $REPO_NAME"
+echo "Git initialized and remote configured for $REPO_NAME"
 

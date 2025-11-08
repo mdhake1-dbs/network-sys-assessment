@@ -11,5 +11,5 @@ touch network-sys-assessment/ansible/{hosts.ini,playbook.yml}
 touch network-sys-assessment/app/{app.py,requirements.txt,Dockerfile}
 touch network-sys-assessment/.github/workflows/ci-cd.yml
 
-echo "✅ Folder structure created successfully!"
+echo "Folder structure created successfully!"
 
