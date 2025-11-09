@@ -9,6 +9,8 @@ ANSIBLE_PLAYBOOK_FILE="./ansible/playbook.yml"
 # 1. Run Terraform Apply and Capture the IP
 echo "--- Running Terraform Apply ---"
 
+terraform -chdir="$TERRAFORM_DIR" init
+terraform -chdir="$TERRAFORM_DIR" apply
 terraform -chdir="$TERRAFORM_DIR" apply -auto-approve
 
 echo "--- Capturing Instance IP ---"
