@@ -24,6 +24,7 @@ if [ -z "$INSTANCE_IP" ]; then
     exit 1
 fi
 echo "New EC2 Instance IP: $INSTANCE_IP"
+echo "Access Application @ http://$INSTANCE_IP "
 
 # 2. Update Ansible Inventory
 echo "--- Updating Ansible Inventory (hosts.ini) ---"
@@ -39,3 +40,5 @@ echo "--- Cleaning up Inventory placeholder ---"
 sed -i "s/$INSTANCE_IP/YOUR_INSTANCE_IP/g" "$ANSIBLE_INVENTORY_FILE"
 
 echo "--- Infrastructure Provisioned. Ready for CI/CD Deployment. ---"
+echo "New EC2 Instance IP: $INSTANCE_IP"
+echo "Access Application @ http://$INSTANCE_IP "

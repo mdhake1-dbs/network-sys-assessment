@@ -5,7 +5,7 @@ set -e
 
 # Load credentials
 if [ ! -f github_credentials.env ]; then
-  echo "❌ github_credentials.env not found!"
+  echo "github_credentials.env not found!"
   exit 1
 fi
 source github_credentials.env
@@ -14,7 +14,7 @@ cd $HOME/network-sys-assessment || exit 1
 
 # Check if .git exists
 if [ ! -d .git ]; then
-  echo "❌ Git repository not initialized. Run setup_git.sh first."
+  echo "Git repository not initialized. Run setup_git.sh first."
   exit 1
 fi
 
@@ -24,5 +24,5 @@ git commit -m "Update project files"
 git branch -M main
 git push -u origin main
 
-echo "✅ Changes pushed successfully to https://github.com/${GITHUB_USERNAME}/${REPO_NAME}"
+echo "Changes pushed successfully to https://github.com/${GITHUB_USERNAME}/${REPO_NAME}"
 

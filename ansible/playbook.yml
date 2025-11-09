@@ -24,6 +24,12 @@
       apt_repository:
         repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
         state: present
+          
+    - name: Install 'at' utility for container scheduling
+      ansible.builtin.apt:
+        name: at
+        state: present
+        update_cache: yes
 
     - name: Install Docker
       apt:
