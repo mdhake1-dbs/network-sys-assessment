@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 code_snippets = {
     "reverse_string": {
-        "logic": "Take Demo String forTesting a string input and print it backwards using a loop or recursion.",
+        "logic": "Take a string input and print it backwards using a loop or recursion.",
         "easy": r"""#include <stdio.h>
 #include <string.h>
 
